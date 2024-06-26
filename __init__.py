@@ -35,7 +35,7 @@ def create_app(test_config=None):
     def tickets_show(ticket_id):
         try: 
             ticket = Ticket.query.filter_by(id=ticket_id).one()
-            return render_template('tickets_show.html')
+            return render_template('tickets_show.html', ticket=ticket)
         except exc.NoResultFound:
             abort(404)
 

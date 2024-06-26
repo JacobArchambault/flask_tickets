@@ -1,10 +1,10 @@
 {% extends "layout.html" %}
-{% block title %}Ticket - TICKET_NAME{% endblock %}
+{% block title %}Ticket - {{ticket.name}}{% endblock %}
 
 {% block body %}
 <div class="content">
-  <p><strong>Name:</strong> TICKET_NAME</p>
-  <p><strong>Status:</strong> TICKET_STATUS</p>
-  <p><strong>URL:</strong> <a href="TICKET_URL" target="_blank">TICKET_URL</a></p>
+  <p><strong>Name:</strong>{{ticket.name}}</p>
+  <p><strong>Status:</strong> {{ticket.status_string()}}</p>
+  <p><strong>URL:</strong> <a href="{{ticket.url}}" target="_blank">{{ticket.url}}</a></p>
 </div>
 {% endblock %}
