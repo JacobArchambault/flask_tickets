@@ -29,7 +29,7 @@ def create_app(test_config=None):
     @app.route('/tickets')
     def tickets():
         tickets = Ticket.query.all()
-        return render_template('tickets_index.html')
+        return render_template('tickets_index.html', tickets=tickets)
 
     @app.route('/tickets/<int:ticket_id>')
     def tickets_show(ticket_id):

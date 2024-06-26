@@ -16,4 +16,4 @@ class Ticket(db.Model):
     }
 
     def status_string(self):
-        return self_statuses_dict[self.status]
+        return self.statuses_dict[self.status]
